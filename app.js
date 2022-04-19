@@ -10,18 +10,36 @@
 // If you can, try writing it in only one line of code.
 
 function findMultiples(integer, limit) {
-    //your code here
-  }
+    let finalArray = []
+    let int = integer
+    let lim = limit
+    let maxIterations = Math.ceil(limit/integer)
+
+    for (i = 1; i <= maxIterations; i++){
+        if(int * i <= lim){
+            finalArray.push(int*i)
+        }
+
+        
+        
+    }
+    
+    return finalArray
+}
+console.log(findMultiples(5,25), [5,10,15,20,25])
+  
+
 
 //-----Prep Method-----
 
 //  P - Parameters - The two things that will be passed into our function is an interger, 
 //  and the multiples of that interger up to the limit, which should include the limit if possible.
+//  Will there ever be a possibility of this function being passed a limit that is lower than the int?
 
 //  R - Return - We should return an array that has the list of the intergers multiples UP TO the limit
 
 //  E - Examples - 
-//  * (5, 25) -> [5,10,15,20,25]
+//  * (5, 25) -> 
 //  * (3, 9)  -> [3,6,9]
 //  * (1, 8)  -> [1,2,3,4,5,6,7,8]
 
